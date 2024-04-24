@@ -99,5 +99,4 @@ require("./routers/loginRegister.routes")(app)
 // });
 
 app.listen(port, () => {
-      console.log( port, process.pid);
     });
