@@ -15,18 +15,18 @@ const cookieParser = require("cookie-parser");
 const helmet = require("helmet");
 const cookieSession = require('cookie-session');
 const {rateLimit} = require( 'express-rate-limit');
-const limiter = rateLimit({
-	windowMs: 1 * 60 * 1000, // 10 minutes
-	limit: 300, // Limit each IP to 100 requests per `window` (here, per 10 minutes).
-	standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
-	legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
-	// store: ... , // Redis, Memcached, etc. See below.
-});
+// const limiter = rateLimit({
+// 	windowMs: 1 * 60 * 1000, // 10 minutes
+// 	limit: 300, // Limit each IP to 100 requests per `window` (here, per 10 minutes).
+// 	standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
+// 	legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
+// 	// store: ... , // Redis, Memcached, etc. See below.
+// });
 
 
 // middlewares 
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
-app.use(limiter)
+//app.use(limiter)
 app.disable('x-powered-by')
 app.use(cookieSession({
   name: 'MavenSession',
