@@ -3,8 +3,8 @@ const db = require("../models");
 
 const session = async (req, res, next) => {
   try {
-    const access_token = req.headers.access_token
-    console.log(access_token , req.headers);
+    const access_token = req.headers.authorization.split( )[1]
+    console.log(access_token , req.headers.authorization);
     if (!access_token) {
       console.log("from session 1");
       console.log(req)
