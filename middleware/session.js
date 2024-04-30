@@ -4,9 +4,10 @@ const db = require("../models");
 const session = async (req, res, next) => {
   try {
     const access_token = req.headers.access_token
-    console.log(access_token);
+    console.log(access_token , req.headers);
     if (!access_token) {
       console.log("from session 1");
+      console.log(req)
       res.send({
         error:[
           {
