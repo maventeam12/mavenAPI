@@ -34,7 +34,7 @@ const validatorCreateSkill= [
             validationResult(req).throw()
             return next()
         }catch(err){
-            console.log(err);
+             (err);
             res.status(403)
             res.send({error : err.array() });
         }

@@ -19,7 +19,6 @@ const verifyToken = async (tokenJwt) => {
   try {
     return jwt.verify(tokenJwt, jwtSecret);
   } catch (error) {
-    console.log(error);
     return null;
   }
 };

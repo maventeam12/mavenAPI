@@ -5,7 +5,6 @@ const Op = db.Sequelize.Op;
 
 // Create and Save a new ContractExtraService
 exports.create = (req, res) => {
-  console.log(req.body);
     // Create a ContractExtraService
     const contractExtraService = {
     serviceName: req.body.serviceName,
@@ -163,7 +162,6 @@ exports.update = (req, res) => {
         }
       })
       .catch(err => {
-        console.log(err);
         res.status(200).send({
           error:[
             {
@@ -238,7 +236,6 @@ exports.delete = (req, res) => {
         }
       })
       .catch((err) => {
-        console.log(err);
         res.send({
           error: [
             {

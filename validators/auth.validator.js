@@ -33,7 +33,6 @@ const validatorRegister = [
                 email : value
             }
         }).catch(err => {
-            console.log(err);
             return Promise.reject({message:"Some error occurred while creating Client, Please try refreshing your page."});
           });
         if (response.length > 0){
@@ -69,7 +68,6 @@ const validatorRegister = [
                 username : value
             }
         }).catch(err => {
-            console.log(err);
             return Promise.reject({message:"Some error occurred while creating Client, Please try refreshing your page."});
           });
         if (response.length > 0){

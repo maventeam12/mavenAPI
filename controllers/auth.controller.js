@@ -161,7 +161,6 @@ exports.logIn = async (req, res) => {
       res.send({ access_token, user: userdata });
     }
   } catch (error) {
-    console.log(error);
     res.status(200).send({
       error: [
         {

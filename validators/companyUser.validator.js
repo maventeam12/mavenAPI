@@ -43,7 +43,7 @@ const validatorCreateCompanyUser = [
                 email : value
             }
         }).catch(err => {
-            console.log(err);
+             (err);
             return Promise.reject({message:"Some error occurred while creating Client, Please try refreshing your page."});
           });
         if (responseClient.length > 0){
@@ -71,7 +71,7 @@ const validatorCreateCompanyUser = [
                 username : value
             }
         }).catch(err => {
-            console.log(err);
+             (err);
             return Promise.reject({message:"Some error occurred while creating Company User, Please try refreshing your page."});
           });
         if (response.length > 0){
@@ -82,7 +82,7 @@ const validatorCreateCompanyUser = [
                 username : value
             }
         }).catch(err => {
-            console.log(err);
+             (err);
             return Promise.reject({message:"Some error occurred while creating Client, Please try refreshing your page."});
           });
         if (responseClient.length > 0){
@@ -120,7 +120,7 @@ const validatorgetAndDeleteCompanyUser = [
     .exists().withMessage({message:"Company User  identifier had not been declared"}).bail()
     .notEmpty().withMessage({message:"Company User  identifier must have a value"}).bail()
     .custom(async (value , {req}) => {
-console.log("value",value);
+ ("value",value);
         const response = await CompanyUser .findAll({
             where:{
                 id : value
@@ -129,7 +129,7 @@ console.log("value",value);
         }).catch(err => {
             return Promise.reject({message:"Some error occurred while bringing Company User , Please try refreshing your page."});
           });
-          console.log(response);
+           (response);
         if (response.length == 0){
             return Promise.reject({message:"Company User does not exist"});
         }
@@ -178,7 +178,7 @@ const validatorupdateCompanyUser = [
                 email : value
             }
         }).catch(err => {
-            console.log(err);
+             (err);
             return Promise.reject({message:"Some error occurred while creating Company User, Please try refreshing your page."});
           });
           if (response.length > 0 ){
@@ -192,7 +192,7 @@ const validatorupdateCompanyUser = [
                 email : value
             }
         }).catch(err => {
-            console.log(err);
+             (err);
             return Promise.reject({message:"Some error occurred while creating Client, Please try refreshing your page."});
           });
         if (responseClient.length > 0){
@@ -221,7 +221,7 @@ const validatorupdateCompanyUser = [
                 username : value
             }
         }).catch(err => {
-            console.log(err);
+             (err);
             return Promise.reject({message:"Some error occurred while creating Company User, Please try refreshing your page."});
           });
         if (response.length > 0 ){
@@ -235,7 +235,7 @@ const validatorupdateCompanyUser = [
                 username : value
             }
         }).catch(err => {
-            console.log(err);
+             (err);
             return Promise.reject({message:"Some error occurred while creating Client, Please try refreshing your page."});
           });
         if (responseClient.length > 0){

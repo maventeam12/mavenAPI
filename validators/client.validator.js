@@ -34,7 +34,6 @@ const validatorCreateClient = [
                 email : value
             }
         }).catch(err => {
-            console.log(err);
             return Promise.reject({message:"Some error occurred while creating Client, Please try refreshing your page."});
           });
         if (response.length > 0){
@@ -80,7 +79,7 @@ const validatorCreateClient = [
                 username : value
             }
         }).catch(err => {
-            console.log(err);
+             (err);
             return Promise.reject({message:"Some error occurred while creating Client, Please try refreshing your page."});
           });
         if (response.length > 0){
@@ -91,7 +90,7 @@ const validatorCreateClient = [
                 username : value
             }
         }).catch(err => {
-            console.log(err);
+             (err);
             return Promise.reject({message:"Some error occurred while creating Company User, Please try refreshing your page."});
           });
         if (responseCompany.length > 0){
@@ -190,7 +189,7 @@ const validatorupdateClient = [
                 email : value
             }
         }).catch(err => {
-            console.log(err);
+             (err);
             return Promise.reject({message:"Some error occurred while creating Client, Please try refreshing your page."});
           });
           if (response.length > 0 ){
@@ -241,7 +240,7 @@ const validatorupdateClient = [
                 username : value
             }
         }).catch(err => {
-            console.log(err);
+             (err);
             return Promise.reject({message:"Some error occurred while creating Client, Please try refreshing your page."});
           });
         if (response.length > 0 ){
@@ -255,7 +254,7 @@ const validatorupdateClient = [
                 username : value
             }
         }).catch(err => {
-            console.log(err);
+             (err);
             return Promise.reject({message:"Some error occurred while creating Company User, Please try refreshing your page."});
           });
         if (responseCompany.length > 0){

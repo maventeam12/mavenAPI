@@ -191,7 +191,6 @@ exports.delete = (req, res) => {
         }
       })
       .catch((err) => {
-        console.log(err);
         res.send({
           error: [
             {
