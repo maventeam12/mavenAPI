@@ -25,15 +25,15 @@ const {rateLimit} = require( 'express-rate-limit');
 
 
 // middlewares 
-app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
-//app.use(limiter)
-app.disable('x-powered-by')
-app.use(cookieSession({
-  name: 'MavenSession',
-  keys: ['MavenEventsBestTeam'],
+// app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+// //app.use(limiter)
+// app.disable('x-powered-by')
+// app.use(cookieSession({
+//   name: 'MavenSession',
+//   keys: ['MavenEventsBestTeam'],
 
-  maxAge: 15 * 60 * 60 * 1000 // 15 hours
-}));
+//   maxAge: 15 * 60 * 60 * 1000 // 15 hours
+// }));
 app.use(cors({origin: "*"}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
