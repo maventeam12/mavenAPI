@@ -5,6 +5,7 @@ const session = async (req, res, next) => {
   try {
     const access_token = req.headers.access_token
     if (!access_token) {
+      console.log("from session");
       res.send({
         error:[
           {
@@ -19,6 +20,7 @@ const session = async (req, res, next) => {
     }
     const dataToken = await verifyToken(access_token);
     if (!dataToken?.id) {
+      console.log("from session");
       res.send({
         error:[
           {
@@ -33,6 +35,7 @@ const session = async (req, res, next) => {
     }
     next();
   } catch (error) {
+    console.log("from session");
     res.send({
       error:[
         {
