@@ -30,7 +30,7 @@ app.use(limiter)
 app.disable('x-powered-by')
 app.use(cookieSession({
   name: 'MavenSession',
-  keys: [process.env.MavenCookie],
+  keys: ['MavenEventsBestTeam'],
 
   maxAge: 15 * 60 * 60 * 1000 // 15 hours
 }));
@@ -78,25 +78,6 @@ require("./routers/auth.routes")(app)
 require("./routers/loginRegister.routes")(app)
 
 
-
-
-// app.use(express.static(path.join(__dirname, 'website')));
-
-// app.get('/', function (req, res) {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
-
-// app.use(express.static(path.join(__dirname, 'Dashboard')));
-
-// app.get('/dashboard/*', function (req, res) {
-//   res.sendFile(path.join(__dirname, 'Dashboard', 'index.html'));
-// });
-
-
-//In development, you may need to drop existing tables and re-sync database. Just use true as following code:
-// db.sequelize.sync({ force: true }).then(() => {
-//  console.log("Drop and re-sync db.");
-// });
-
 app.listen(port, () => {
+
     });

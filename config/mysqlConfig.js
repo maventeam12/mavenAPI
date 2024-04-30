@@ -10,7 +10,7 @@ acquire: maximum time, in milliseconds, that pool will try to get connection bef
 module.exports = {
     HOST: "mysql.old.mavenevents.ae",
     USER: "mavenapi_dbuser",
-    PASSWORD: process.env.mysqlPassword,
+    PASSWORD: 'Team@VPS',
     DB: "mysqlteam",
     dialect: "mysql",
     pool: {

@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const jwtSecret = process.env.jwtSecret;
+const jwtSecret = 'MavenEvents@WebApp2024';
 
 const tokenSign = async (user) => {
   const sign = jwt.sign(
